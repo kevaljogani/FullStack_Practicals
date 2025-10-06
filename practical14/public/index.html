@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Upload Resume (PDF only, max 2MB)</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <main class="container">
+    <div class="card">
+      <h1>Upload your resume</h1>
+      <p class="hint">Only <strong>PDF</strong>. Max <strong>2MB</strong>.</p>
+
+      <form id="uploadForm">
+        <label class="file-label">
+          <input id="fileInput" name="resume" type="file" accept="application/pdf">
+          <span>Select PDF file</span>
+        </label>
+
+        <div class="progress-wrapper" aria-hidden="true">
+          <div id="progressBar" class="progress-bar"></div>
+          <div id="progressText" class="progress-text">0%</div>
+        </div>
+
+        <div class="buttons">
+          <button id="uploadBtn" type="submit">Upload</button>
+        </div>
+
+        <div id="message" class="message" role="status"></div>
+      </form>
+    </div>
+  </main>
+
+  <script src="/upload.js"></script>
+</body>
+</html>

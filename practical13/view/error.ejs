@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Input Error</title>
+  <link rel="stylesheet" href="https://unpkg.com/simpledotcss/simple.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e3f2fd; /* Light blue background */
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+    }
+
+    .container {
+      background: #bbdefb; /* Blue container */
+      max-width: 400px;
+      width: 100%;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 20px;
+      font-size: 22px;
+      color: #0d47a1; /* Dark blue text */
+    }
+
+    .error-box p {
+      font-size: 16px;
+      color: #0d47a1; /* Dark blue text */
+      margin-bottom: 20px;
+    }
+
+    a {
+      display: inline-block;
+      padding: 10px 18px;
+      background-color: #1e88e5; /* Blue button */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    a:hover {
+      background-color: #1565c0; /* Darker blue on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Oops! There was a problem.</h1>
+    </header>
+
+    <main>
+      <div class="error-box">
+        <p><strong>Error:</strong> <%= errorMessage %></p>
+      </div>
+      <a href="/">Try Again</a>
+    </main>
+  </div>
+</body>
+</html>

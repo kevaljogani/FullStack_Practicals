@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Income Calculator</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e3f2fd; /* Light blue background */
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      background: #bbdefb; /* Blue container */
+      max-width: 420px;
+      width: 100%;
+      padding: 30px 25px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: 22px;
+      color: #0d47a1; /* Dark blue text */
+    }
+
+    .subtitle {
+      color: #1976d2; /* Medium blue text */
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+      text-align: left;
+      font-weight: 600;
+      color: #0d47a1; /* Dark blue text */
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #90caf9; /* Light blue border */
+      box-sizing: border-box;
+      font-size: 15px;
+    }
+
+    button {
+      margin-top: 22px;
+      padding: 12px;
+      width: 100%;
+      background-color: #1e88e5; /* Blue button */
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    button:hover {
+      background-color: #1565c0; /* Darker blue on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Calculate Total Income</h1>
+      <p class="subtitle">Please enter your income from two different sources below.</p>
+    </header>
+
+    <main>
+      <form action="/calculate" method="POST">
+        <label for="income1">Income from Source 1 (₹):</label>
+        <input 
+          type="text" 
+          id="income1" 
+          name="income1" 
+          placeholder="e.g., 50000" 
+          value="<%= typeof income1 !== 'undefined' ? income1 : '' %>"
+          required
+        >
+
+        <label for="income2">Income from Source 2 (₹):</label>
+        <input 
+          type="text" 
+          id="income2" 
+          name="income2" 
+          placeholder="e.g., 25000" 
+          value="<%= typeof income2 !== 'undefined' ? income2 : '' %>"
+          required
+        >
+
+        <button type="submit">Calculate Total</button>
+      </form>
+    </main>
+  </div>
+</body>
+</html>
