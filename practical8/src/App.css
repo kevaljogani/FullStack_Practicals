@@ -1,0 +1,87 @@
+body {
+  font-family: Arial, sans-serif;
+  background: #e6f0ff;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  color: #004aad;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.counter button {
+  font-size: 24px;
+  padding: 10px 20px;
+  margin: 0 15px;
+  border: none;
+  border-radius: 10px;
+  background: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.counter button:hover {
+  background: #0056b3;
+}
+
+.counter span {
+  font-size: 32px;
+  font-weight: bold;
+  color: #004aad;
+}
+
+.exercise-input input {
+  padding: 8px;
+  border-radius: 8px;
+  border: 1px solid #007bff;
+}
+
+.reset {
+  padding: 8px 15px;
+  border: none;
+  border-radius: 8px;
+  background: #004aad;
+  color: white;
+  cursor: pointer;
+}
+
+.timer {
+  margin-top: 20px;
+}
+
+.timer p {
+  font-size: 24px;
+  color: #004aad;
+  margin: 10px 0;
+}
+
+.timer button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  border-radius: 8px;
+  background: #004aad;
+  color: white;
+  cursor: pointer;
+}
